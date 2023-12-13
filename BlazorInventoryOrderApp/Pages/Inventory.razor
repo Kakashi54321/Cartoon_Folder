@@ -1,0 +1,41 @@
+@page "/inventory"
+
+<h3>Inventory</h3>
+
+@if (inventoryItems == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in inventoryItems)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private InventoryItem[] inventoryItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        inventoryItems = await InventoryService.GetInventoryItems();
+    }
+}
