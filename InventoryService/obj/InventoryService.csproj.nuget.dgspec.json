@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj": {}
+    "D:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj": {}
   },
   "projects": {
-    "d:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj": {
+    "D:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj",
+        "projectUniqueName": "D:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj",
         "projectName": "InventoryService",
-        "projectPath": "d:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj",
+        "projectPath": "D:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\InventoryService.csproj",
         "packagesPath": "C:\\Users\\nilesh.prasad\\.nuget\\packages\\",
-        "outputPath": "d:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\obj\\",
+        "outputPath": "D:\\CodeBase\\TechAvante\\Cartoon_Folder\\InventoryService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
