@@ -1,0 +1,14 @@
+# Use the official ASP.NET Core runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the published output from the Blazor app
+COPY bin/Release/net8.0/publish .
+
+# Expose the port the app will run on
+EXPOSE 80
+
+# Set the entry point for the application
+ENTRYPOINT ["dotnet", "BlazorInventoryOrderApp.dll"]  # Replace YourBlazorApp.dll with the actual DLL name

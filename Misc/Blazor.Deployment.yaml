@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blazor-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blazor-app
+  template:
+    metadata:
+      labels:
+        app: blazor-app
+    spec:
+      containers:
+      - name: blazor-app
+        image: your-registry/blazor-app:latest  # Replace with your actual Blazor app Docker image
+        ports:
+        - containerPort: 80
