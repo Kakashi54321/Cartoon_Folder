@@ -1,0 +1,26 @@
+# Use the official .NET Core SDK image as the base image
+FROM mcr.microsoft.com/dotnet/core/sdk:8.0 AS build
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the project files to the container
+COPY . .
+
+# Build the application
+RUN dotnet publish -c Release -o out
+
+# Use the official .NET Core runtime image as the final base image
+FROM mcr.microsoft.com/dotnet/core/aspnet:8.0 AS runtime
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the published output from the build image
+COPY --from=build /app/out .
+
+# Expose the port the app will run on
+EXPOSE 80
+
+# Set the entry point for the application
+ENTRYPOINT ["dotnet", "OrderService.dll"]
