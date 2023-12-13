@@ -1,0 +1,42 @@
+Kubectl commands to apply the deployment yaml file and some major commands to describe , get logs , check cpu and memory of each pod
+
+
+Apply Deployment YAML File:
+kubectl apply -f your-deployment.yaml
+Replace your-deployment.yaml with the actual name of your deployment YAML file.
+
+Describe Deployment:
+kubectl describe deployment your-deployment-name
+Replace your-deployment-name with the name of your deployment.
+
+Get Pods:
+kubectl get pods
+This command will show you a list of pods in the current namespace.
+
+Get Logs from a Pod:
+kubectl logs your-pod-name
+Replace your-pod-name with the name of the pod from which you want to get logs.
+
+Describe Pod:
+kubectl describe pod your-pod-name
+Replace your-pod-name with the name of the pod you want to describe.
+
+Check CPU and Memory Usage of Each Pod:
+kubectl top pods
+This command displays CPU and memory usage for each pod in the current namespace.
+
+Scale Deployment:
+kubectl scale deployment your-deployment-name --replicas=3
+Replace your-deployment-name with the name of your deployment and adjust the replicas value as needed.
+
+Delete Deployment:
+kubectl delete deployment your-deployment-name
+Replace your-deployment-name with the name of your deployment.
+
+Apply Horizontal Pod Autoscaler (HPA):
+kubectl apply -f your-hpa.yaml
+Replace your-hpa.yaml with the actual name of your Horizontal Pod Autoscaler YAML file.
+
+Get HPA:
+kubectl get hpa
+This command shows the status of Horizontal Pod Autoscalers.
