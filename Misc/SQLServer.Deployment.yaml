@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sql-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sql-server
+  template:
+    metadata:
+      labels:
+        app: sql-server
+    spec:
+      containers:
+      - name: sql-server
+        image: your-registry/sql-server:latest  # Replace with your actual SQL Server Docker image
+        env:
+        - name: SA_PASSWORD
+          value: YourPassword123
+        - name: ACCEPT_EULA
+          value: Y
+        - name: MSSQL_DB_NAME
+          value: YourDatabaseName
